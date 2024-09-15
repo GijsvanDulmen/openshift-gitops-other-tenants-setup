@@ -1,0 +1,15 @@
+{{- $name := (include "app-name" $) -}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ $name }}"
+  labels:
+    app: "{{ $name }}"
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: "{{ $name }}"

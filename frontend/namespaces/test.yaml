@@ -1,0 +1,4 @@
+foo: "test"
+appName: frontend
+replicas: 1
+domainName: "frontend.cloud.ticq.org"
